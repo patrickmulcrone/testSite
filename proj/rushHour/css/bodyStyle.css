@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+
+/* ACCESS Rush Hour CSS */
+
+ body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #eaeaea;
+	margin: 0; 
+	padding: 0 0 50px 0;
+	color: #000000;
+	font-size:12px;
+	background-image:url(../media/dots.png);
+	background-repeat: repeat;
+}
+
+/* Header and Title */
+
+h3 { font-family: DaysRegular, Helvetica, Verdana, sans-serif;
+color:#db5e3d;
+
+}
+
+
+h4 { font-family: DroidSerifRegular, serif;
+color:#35645f;
+
+}
+
+h5 { font-family: CicleFina, Verdana, sans-serif;
+color:#f48968;
+
+}
+
+.subTitle { font-family: DroidSerifRegular, serif;
+font-size: 16px;
+font-weight:bold;
+color:#35645f;
+
+}
+
+#header { 
+	padding-top: 0px;
+	/*background: #eaeaea; */
+	
+	
+} 
+
+
+#banner {
+	
+    width: 1000px;
+    height: 300px;
+    /*background-color: #eaeaea;*/
+	padding: 0px;
+	z-index:0;
+
+} 
+
+
+#articleInfo {
+	width: 1000px;
+    height: 200px;
+    background-color: rgba(234,234,234,0);
+	padding: 0px;
+	position:absolute; 
+	top: 50px;
+	
+
+}
+
+#infoBox {
+	position:relative;
+	float:right;
+    width: 600px;
+    height: 200px;
+    background-color: rgba(234,234,234,0);
+	padding: 0px;
+	
+} 
+
+
+#articleTitle {
+height: 50px;
+	padding: 0px 0px 0px 300px;
+	margin: auto;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: left;
+	line-height:90%;
+	
+	
+	
+}
+    
+#articleLead {
+height: 20px;
+	padding: 0px 300px 0px 0px;
+	margin: auto;
+	font-size: 14px;
+	text-align: right;
+	line-height:90%;
+	
+	
+}
+	
+#articleAuthor {
+height: 10px;
+	padding: 0px 0px 0px 300px;
+	margin: auto;
+	font-size: 24px;
+	text-align: left;
+	line-height:80%;
+	
+	
+}
+
+/* END Header and Title */
+
+/* Body Copy */
+
+#textIntro {
+text-align:left;
+font-family: Georgia, "Times New Roman", Times, serif;
+font-size: 15px;
+/*font-stretch: expanded;*/
+font-weight:bold;
+letter-spacing: 4px; 
+padding: 10px 0 0 0;
+color: #db5e3d;
+
+}
+
+.org {
+font-family: MatizRegular, Helvetica, Verdana, sans-serif;
+color: #db5e3d;
+font-size:36px;
+font-style:italic;
+font-weight:bold;
+line-height: 75%;
+}
+
+
+
+#container { 
+	width: 1000px;  
+	background: #eaeaea;
+	margin: 0 auto; 
+	border: 1px #35645f;
+	border-style:none solid none solid;
+	border-bottom-left-radius: 15px 10px;
+	border-bottom-right-radius: 15px 10px;
+	
+	
+}
+
+.expandable a {
+	text-decoration: none;
+	color: #35645f;
+}
+
+
+
+#mainContent {
+ 	margin: 0 12em 0 12em; 
+	border: 1px #35645f;
+	border-style: solid none none none;
+} 
+
+#subContent {
+ 	/*margin: 0 12em 0 12em; */
+	
+	
+} 
+
+.sub1 {
+/* border: 1px #35645f;
+border-style: solid none none none;*/
+-moz-column-count:2; /* Firefox */
+-webkit-column-count:2; /* Safari and Chrome */
+column-count:2;
+-moz-column-gap:20px; /* Firefox */
+-webkit-column-gap:20px; /* Safari and Chrome */
+column-gap:20px;
+-moz-column-rule:1px outset #35645f; /* Firefox */
+-webkit-column-rule:1px outset #35645f; /* Safari and Chrome */
+column-rule:1px outset #35645f;
+
+}
+
+/* END Body Copy */
+
+
+/* Footer*/
+
+#copyFooter { 
+	height:100px;
+	width:1000px;
+	/* margin: 0 12em 0 12em; */
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 10px;			
+	padding: 0; 
+	background: #e3b1a4;
+	border:  3px #35645f;
+	border-style: none none solid none;
+	border-bottom-left-radius: 15px 10px;
+	border-bottom-right-radius: 15px 10px;
+		
+	
+}  
+
+
+#copyFooter p {
+	margin: 0; 
+	padding: 5%;
+	text-align: center;
+	vertical-align:text-middle;
+	
+	
+	
+}
+
+#copyFooter a {
+	text-decoration: none;
+	color:#35645f;
+	
+}
+
+.footText {
+width: 33%;
+margin: 0; 
+color: eaeaea;
+float: left;
+
+/* Firefox */
+display:-moz-box;
+-moz-box-orient:horizontal;
+-moz-box-pack:center;
+-moz-box-align:center;
+
+/* Safari and Chrome */
+display:-webkit-box;
+-webkit-box-orient:horizontal;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+
+/* W3C */
+display:box;
+box-orient:horizontal;
+box-pack:center;
+box-align:center;
+
+} 
+
+/* CSS3 Box & Images */
+
+#fig1styleR {
+	float:right;
+	border: none;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+	
+}
+
+.inlinePadR {
+	float:right;
+	margin: 0 0 0 10px;
+	padding: 10px 10px 10px 10px;
+
+}
+
+#figstyleL {
+	float:right;
+	border: none;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+	
+}
+
+.inlinePadL {
+	float:right;
+	margin: 0 0 0 10px;
+	padding: 10px 10px 10px 10px;
+
+}
+
+/* MISC */
+
+
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.spacer {
+	height: 50px;
+	width: 1px;
+	background-color: #35645f;
+	float:left;
+	margin: 25px 0 25px 0;
+}
