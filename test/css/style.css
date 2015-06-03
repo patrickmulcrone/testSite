@@ -19,6 +19,17 @@
   box-shadow: 0 1px 0 #ffdb99;
   z-index: 1;
 }
+
+.header a {
+
+text-decoration: none;
+}
+
+.header__logo a {
+
+text-decoration: none;
+}
+
 .header__logo {
   color: #20BF9F;
   margin: 0;
@@ -253,7 +264,7 @@ html { overflow-y: scroll; }
 
 
 a {
-text-decoration: none;
+text-decoration: none !important;
 
 }
 
