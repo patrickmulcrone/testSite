@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+
+    <title>Books API Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<style>
+
+</style>
+<body>
+<!-- Header div for Search frame -->
+<div class="header">
+
+
+
+</div>
+
+<!--div for input form -->
+<div class="row">
+    <div class ="container-fluid">
+        <div class="col-md-6"> <p>Enter Subject or Author</p>
+
+            <!-- form id "search" for search input -->
+            <form id="search">
+            <div class="input-group">
+
+                <!-- input id for form = "subject" -->
+                <input id="subject" class="form-control"  placeholder="search input" />
+                <div class="input-group-btn">
+
+                    <!-- "search" button = submit -->
+                    <button type="submit" class="btn btn-default" id="go" >Search! </button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+        <div id="content"></div>
+
+
+
+<script>
+    $('#search').on("submit",function(e) {
+console.log(e);
+        e.preventDefault();
+
+        <!-- clear content form after submission -->
+        $("#content").empty();
+
+        var s = $("#subject").val();
+
+        <!-- Request data from Google Books -->
+        $.getJSON("https://www.googleapis.com/books/v1/volumes",{q:s})
+                .done(
+                function(data) {
+                    console.log(data);
+                    var results = data;
+                    handleResponse(results);
+                }
+        );
+//        $.ajax({
+//            method: 'GET',
+//            url: "https://www.googleapis.com/books/v1/volumes",
+//            data: {q:s},
+//            success: handleResponse(),
+//            dataType: 'jsonp'
+//        });
+    });
+
+    <!-- Default Response is 10 items. Loop to list Responses -->
+    function handleResponse(results){
+        for (var i = 0; i < results.items.length; i++) {
+            var item = results.items[i];
+
+            // in production code, item.text should have the HTML entities escaped.
+            $('#content').append("<p><img src='" + item.volumeInfo.imageLinks.thumbnail + "' class='bookThumbnail' />" +item.volumeInfo.title + " by " + item.volumeInfo.authors + "</p>");
+            //            get thumbnail image, title, authors.
+
+        }
+        <!-- clear "subject" input value. Ready to go again -->
+        $("#subject").val("");
+
+    }
+
+
+</script>
+
+
+
+        </div>
+</body>
+</html>

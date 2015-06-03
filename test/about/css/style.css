@@ -244,16 +244,3 @@ html { overflow-y: scroll; }
 .vertical section:after{ top:-60px;left:810px;}
 .vertical section:target:after{ left:-9999px;}
 
-
-.portContent, .portConnect {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-
-
-a {
-text-decoration: none;
-
-}
-

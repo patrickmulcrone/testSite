@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* Rush Hour Article CSS Fonts */
+
+@font-face {
+    font-family: 'DaysRegular';
+    src: url('../media/Days-fontfacekit/Days-webfont.eot');
+    src: url('../media/Days-fontfacekit/Days-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../media/Days-fontfacekit/Days-webfont.woff') format('woff'),
+         url('../media/Days-fontfacekit/Days-webfont.ttf') format('truetype'),
+         url('../media/Days-fontfacekit/Days-webfont.svg#DaysRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+}
+
+@font-face {
+    font-family: 'DroidSerifRegular';
+    src: url('../media/Droid-Serif-fontfacekit/DroidSerif-Regular-webfont.eot');
+    src: url('../media/Droid-Serif-fontfacekit/DroidSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../media/Droid-Serif-fontfacekit/DroidSerif-Regular-webfont.woff') format('woff'),
+         url('../media/Droid-Serif-fontfacekit/DroidSerif-Regular-webfont.ttf') format('truetype'),
+         url('../media/Droid-Serif-fontfacekit/DroidSerif-Regular-webfont.svg#DroidSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CicleFina';
+    src: url('../media/Cicle-fontfacekit/Cicle_Fina-webfont.eot');
+    src: url('../media/Cicle-fontfacekit/Cicle_Fina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../media/Cicle-fontfacekit/Cicle_Fina-webfont.woff') format('woff'),
+         url('../media/Cicle-fontfacekit/Cicle_Fina-webfont.ttf') format('truetype'),
+         url('../media/Cicle-fontfacekit/Cicle_Fina-webfont.svg#CicleFina') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
