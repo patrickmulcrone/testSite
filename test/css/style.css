@@ -197,63 +197,6 @@ p {
   background: rgba(250,250,250,1);
 }
 
-/**
- *  CSS3 Only Horizontal and Vertical Accordion
- *  Author: Paul Underwood for Hongkiat.com
- *  Website: www.paulund.co.uk
- *  Date: 27/11/11
- *  Version: 1.0
- */
-
- 
-article, aside, details, figcaption, figure, footer, header, hgroup, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
-html { overflow-y: scroll; }
-
-/*Define Accordion box*/
-.accordion { width:830px; overflow:hidden; margin:10px auto; color:#474747; background:#414141; padding:10px; }
-
-/*General Accordion****************************************************************************/
-/*Set style of open slide*/
-.accordion section:target { background:#FFF; padding:10px;}
-.accordion section:target:hover { background:#FFF; }
-.accordion section:target h2 {width:100%;}
-.accordion section:target h2 a{ color:#333; padding:0;}
-.accordion section:target p {display:block;}
-.accordion section h2 a{padding:8px 10px;display:block; font-size:16px; font-weight:normal;color:#eee; text-decoration:none; }
-
-/*set style of closed slide*/
-.accordion section{ float:left; overflow:hidden; color:#333; cursor:pointer; background: #333; margin:3px; }
-.accordion section:hover {background:#444;}
-.accordion section p { display:none; }
-.accordion section:after{position:relative;font-size:24px;color:#000;font-weight:bold;}
-.accordion section:nth-child(1):after{content:'1';}
-.accordion section:nth-child(2):after{content:'2';}
-.accordion section:nth-child(3):after{content:'3';}
-.accordion section:nth-child(4):after{content:'4';}
-.accordion section:nth-child(5):after{content:'5';}
-/*End General Accordion****************************************************************************/
-
-
-
-/*Vertical Accordion *************************************************************************/
-.vertical section{ width:100%; height:40px;
-  -webkit-transition:height 0.2s ease-out;
-  -moz-transition:height 0.2s ease-out;
-    -o-transition:height 0.2s ease-out;
-  -ms-transition:height 0.2s ease-out;
-    transition:height 0.2s ease-out;
-}
-/*Set height of the slide*/
-.vertical :target{ height:250px; width:97%; }
-
-.vertical section h2 { position:relative; left:0; top:-15px; }
-
-/*Set position of the number on the slide*/
-.vertical section:after{ top:-60px;left:810px;}
-.vertical section:target:after{ left:-9999px;}
 
 
 .portContent, .portConnect {
@@ -267,4 +210,215 @@ a {
 text-decoration: none !important;
 
 }
+
+body {
+  overflow:hidden;
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  z-index: 5;
+     display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 48px;
+    
+}
+
+
+
+
+
+#tri-d-wrapper {
+    display: block;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#img-wrapper {
+    display: block;
+    width: 350px;
+    background: #3498db;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -131px;
+    -webkit-transform: rotateX(30deg) scale(.65);
+    transform: rotateX(30deg) scale(.65);
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,.2);
+}
+
+#img-wrapper:hover {
+    -webkit-transform: rotateX(0deg) scale(1);
+    transform: rotateX(0deg) scale(1);
+    box-shadow: none;
+}
+
+#img-wrapper img {
+    width: 800px;
+    margin: 0;
+    position: relative;
+    display: block;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+#img-wrapper:hover img {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+#img-wrapper:hover figcaption {
+    background: rgba(0,0,0,.75);
+}
+
+#img-wrapper:hover figcaption h2 {
+    opacity: 1;
+    padding-left: 20px;
+    -webkit-transition: .3s all ease .3s;
+    transition: .3s all ease .3s;
+}
+
+#img-wrapper:hover figcaption .bottom-detail {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#img-wrapper:hover figcaption .bottom-detail span {
+    opacity: 1;
+    top: 0;
+    -webkit-transition: .3s all ease .5s;
+    transition: .3s all ease .5s;
+}
+
+#img-wrapper:hover figcaption .bottom-detail .social-icons li a {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s all ease .5s;
+    transition: .3s all ease .5s;
+}
+
+#img-wrapper:hover figcaption .bottom-detail .social-icons li a.fa-twitter {
+    color: #50ABF1;
+    -webkit-transition: .3s all ease .7s;
+    transition: .3s all ease .7s;
+}
+
+#img-wrapper:hover figcaption .bottom-detail .social-icons li a.fa-facebook {
+    color: #3B599A;
+}
+
+#img-wrapper:hover figcaption .bottom-detail .social-icons li a.fa-dribbble {
+    color: #EC4989;
+    -webkit-transition: .3s all ease .6s;
+    transition: .3s all ease .6s;
+}
+
+#img-wrapper:hover figcaption .bottom-detail .social-icons li a.fa-behance {
+    color: 1769ff;
+    -webkit-transition: .3s all ease .8s;
+    transition: .3s all ease .8s;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+figcaption h2 {
+    margin: 0;
+    color: white;
+    font-size: 22px;
+    line-height: 70px;
+    opacity: 0;
+    padding-left: 0;
+    padding-right: 20px;
+    font-weight: 300;
+}
+
+figcaption .bottom-detail {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 70px;
+    background: white;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: .3s all ease .1s;
+    transition: .3s all ease .1s;
+}
+
+.bottom-detail span {
+    font-size: 17px;
+    opacity: 0;
+    top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #999;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.bottom-detail .social-icons {
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0;
+}
+
+.social-icons li a {
+    font-size: 22px;
+    text-decoration: none;
+    padding: 22px 15px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.fa-twitter {
+    color: #50ABF1;
+}
+
+.fa-facebook {
+    color: #3B599A;
+}
+
+.fa-dribbble {
+    color: #EC4989;
+}
+
+.fa-behance {
+    color: #1769ff;
+}
+
 
