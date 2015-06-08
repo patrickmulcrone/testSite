@@ -1,0 +1,81 @@
+/* Flex box define */
+.actions-list {
+    display: -webkit-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;  
+}
+
+.actions-list .action-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+/* Design: widths, colors, borders, etc... */
+.actions-list {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+.actions-list .action-item {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000000;
+    padding-left: 52px;
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    background-size: 200px;
+    line-height: 500px;
+    height: 500px;
+    max-width: 50px;
+    border: solid 1px #e59400;
+}
+.actions-list .action-item:hover {
+    max-width: 750px;
+    background-color: #ffffff;
+    padding-right: 10px;
+    border-top: solid 1px #20BF9F;
+    border-bottom: solid 1px #20BF9F;
+}
+.actions-list .action-item:first-child {
+    border: none;
+}
+
+.wireAuth {
+    background-image: url(../img/wireAuth.jpg);
+}
+.wireMenu {
+    background-image: url(../img/wireMenu.jpg);
+}
+.wireProfile {
+    background-image: url(../img/wireProfile.jpg);
+}
+.wireStrain01 {
+    background-image: url(../img/wireStrain01.jpg);
+}
+.wireStrain02 {
+    background-image: url(../img/wireStrain02.jpg);
+}
+.wireStrain03 {
+    background-image: url(../img/wireStrain03.jpg);
+}

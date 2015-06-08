@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rush Hour | ACCESS | Spring 2013</title>
+  <meta name="description" content="" />
+  
+  <meta name="keywords" content="NCSA, National Center for Supercomputing Applications, University of Illinois, high-performance computing, science, scientific research, scientific visualization, ion channels, potassium, cannel cartography" />
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" >
+  
+  <link rel="stylesheet" type="text/css" href="css/fonts.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.3" media="screen" />
+  
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/processing-1.4.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.expander.min.js"></script>
+  <script type="text/javascript" src="js/expandCustom.js"></script>
+  <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.3"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+  
+  
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+  </head>
+
+
+<body>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+	
+</script>
+
+ <div id="container">
+ <div id="header">
+    <canvas id="banner" data-processing-sources="media/rush/rush.pde"><img src="media/BannerForElderlyBrowsers.jpg" height="300" width="1000"></canvas>
+    
+    <div id="articleInfo">
+    <div id="infoBox">
+    	<div id="articleTitle">
+        <h3><em>Rush</em><br>Hour<h3>
+    	</div>
+    	<div id="articleLead">
+        	<h4>Scientists zero in on how ion channels<br>coordinate the high-volume passage<br>of potassium into and out of cells.<h4>
+        </div>
+    	<div id="articleAuthor"><h5>by Kathleen <br>M. Wong<h5>
+        </div>
+<!-- end info box--> </div>
+        
+<!-- end article info--></div>
+    
+    <br class="clearfloat" />
+<!-- end #header --></div>
+
+
+  <div id="mainContent">
+    <p><span class="org">D</span>on't stop now: it's rush hour inside your body.
+    Every second of every moment, ions by the billions are flooding in and out of your cells. These mass migrations send waves of electric charge changes coursing down your nerves, transmitting sensory signals and muscle commands as fast as electricity can carry them.</p>
+    <br>
+   <div class="sub1"> <p>Ions arrive and depart from cells almost instantaneously, streaming through the oily membrane surrounding each cell as fast as if it weren't there. But in reality, each charged atom must pass through one of thousands of portals in the membrane known as an ion channels, designed to allow a specific kind of ion to enter. 
+   <br><br>For example, channels for potassium must prevent similar ions such as sodium--which are nearly the same size as potassium atoms and carry an identical positive charge--from squeezing through at the same time. By rights, this filtering should slow your body's business to a crawl. Just how ion channels can conduct traffic so quickly and selectively baffled researchers for years.</p>
+    <p>Now, biophysicists Benoit Roux and Simon Berneche of Weill Medical College at Cornell University have described mass ion migration in unprecedented detail. With the help of Alliance supercomputers at NCSA, they simulate the passage of ions through a potassium channel at the atomic scale. The results offer scientists valuable perspectives on how ion channels and other molecular machines operate in every living cell.</p></div>
+    
+    <div class="expandable">
+    <div id="subContent">
+    <br><br>
+    
+    <span class="subTitle">More than a Static Image</span>
+    <br><br>
+
+<span class="org">J</span>ust four years ago, the world got its first view of what a potassium channel looks like. An X-ray crystallographic image taken in 1998 by Rod MacKinnon and collaborators at Rockefeller University revealed the channel's three-dimensional form. Its mouth was perfectly sized to admit a potassium ion stripped of its surrounding cloud of water molecules but would not let in a dehydrated sodium ion. <div class="inlinePadR"><div id="figstyleR"><p class="caption"><a class="fancybox" rel="group" title="Potassium ion channel embedded in a cell membrane and surrounded by potassium and chloride ions floating among water molecules." href="media/fig1.jpg"><img src="media/fig1_sm.jpg" alt="Potassium ion channel embedded in a cell membrane and surrounded by potassium and chloride ions floating among water molecules." /><br>Potassium ion channel embedded in a <br>cell membrane and surrounded by <br>potassium and chloride ions <br>floating among water molecules.</a></p></div></div>
+The channel was long enough to hold several ions at once, suggesting how it could transport ions so quickly. And the channel's negatively charged interior, which resembled the environment of water, suggested it could entice a potassium ion to shed its water molecules and slip inside as easily as if it remained in solution. That, however, was where the insights ended. 
+<br>
+
+<br>
+
+"The X-ray images gave us the essential elements that are needed to understand the channel's operation. But these are static, so one cannot see the forces that come into play when the ions and the water molecules are moving," Roux says. 
+<br><br>
+To understand how the channel ushers potassium ions along, and why the ions don't repel one another more strongly, scientists needed to create and animate a virtual version of the entire system using molecular dynamics. This was done using supercomputers, including the SGI Origin2000 at NCSA at the University of Illinois at Urbana-Champaign. 
+<br><br>
+Berneche and Roux used a program known as CHARMM (Chemistry at Harvard Molecular Mechanics), which is designed specifically to run molecular dynamics simulations, to build a potassium channel, cell membrane molecules, <br>water molecules and potassium ions. "Our calculations are a way to exploit the fantastic information obtained recently from the X-ray images so that we can really connect them to the most fundamental physical laws," Roux says. All in all, the program tracked the activities of about 40,000 atoms--a hefty computational burden.
+<br><br>
+But even with today's most powerful supercomputers, it would be impossible to track the movements of every atom in the system while simulating a single potassium ion arriving at, entering, and completely traversing the channel. So Berneche and Roux adopted a more practical strategy and mapped the energetic topography of the journey instead. The technique can be likened to measuring the hills and valleys a rolling ball might encounter. The places within the channel where repulsive atomic forces encourage ions to roll away would be the hills. Sites within the channel where energy barriers are low tend to slow the travel of ions like valleys. With this topography mapped out, they were able to calculate the average energetic environment a traveling potassium ion would be likely to see.
+<br><br><br>
+
+<span class="subTitle">Channel Cartography</span>
+<br><br><div class="inlinePadR"><div id="figstyleR"><p class="caption"><a class="fancybox" rel="group" title="Possible positions of potassium ions following the lowest energy pathways through the channel." href="media/filter_model.jpg"><img src="media/filter_model_sm.jpg" alt="Possible positions of potassium ions following the lowest energy pathways through the channel." /><br>Possible positions of potassium ions <br>following the lowest energy pathways<br> through the channel.</a></p></div></div>
+<span class="org">W</span>hat the calculations revealed was astonishing. The model indicated a progression where potassium ions slide in and out of the binding sites in unison. Just as one ion leaves the channel, another slides into place outside the mouth, and the ions already in the channel roll one valley, or binding site, closer to the exit. Furthermore, Roux says, "Many biophysicists had been relatively uncomfortable having so many ions in a small pore; the energy repelling one another was thought to be enormous ... The simulation showed us, yes, the ions can move in this pore, and the repulsion in the pore is actually much more modest than people had expected."
+<br><br><br>
+In addition to five interior valleys or sites where the simulation found that ions were most likely to be located, Roux's calculations predicted two as-yet-undetected sites at the mouth of the channel, just outside the cell membrane. The energetic slope at each of these valleys was very gentle and allowed ions to keep moving rather than linger. 
+<br><br><br>
+Just as Berneche and Roux completed their analyses, MacKinnon and colleagues made available a second X-ray crystallographic image showing the potassium channel at much higher resolution. The snapshot revealed several potassium ions in the act of passing through the channel, data that closely agreed with the positions predicted by Roux and Berneche. The crystallography work and the prediction were published in the same issue Nature in 2001. 
+<br><br><br>
+<div class="inlinePadL"><div id="figstyleL"><p class="caption"><a class="fancybox" rel="group" title="Maps of the energy barriers faced by an ion in different parts of the channel. Areas with high energy barriers are colored red, while those with low energy barriers are colored blue." href="media/kcsa_pmf_fig2.jpg"><img src="media/kcsa_pmf_fig2_sm.jpg" alt="Maps of the energy barriers faced by an ion in different parts of the channel. Areas with high energy barriers are colored red, while those with low energy barriers are colored blue. An ion following the lowest energy pathway (traced by the heavy dotted lines) would assume configurations a-b-d-f. Alternatively, ions may follow a secondary low-energy pathway (traced by the thin dashed lines) that follows the configurations a-c-d-f." /></a><br>Maps of the energy barriers faced by an ion in different parts of the channel.<br> Areas with high energy barriers are colored red, while those with low energy <br> barriers are colored blue. An ion following the lowest energy pathway<br> (traced by the heavy dotted lines would assume configurations a-b-d-f. <br>Alternatively, ions may follow a secondary low-energy pathway <br>(traced by the thin dashed lines) that follows the configurations a-c-d-f.</p></div></div>In an accompanying review, biochemist Christopher Miller of Brandeis University writes of Roux and Berneche's achievement, "This successful prediction in advance of the facts--a rarity in computational biochemistry--enhances the confidence of skeptical experimentalists in methods and parameters used in this theoretical work."<br><br> 
+
+Now that the basis of ion conduction is clearer, the next challenge will be to understand how the potassium channel opens and closes its doors to allow an ion to pass. The potassium channel itself looks like an upside-down teepee made up of four identical molecular subunits. Each subunit makes up part of the door that closes the channel entrance. Recent X-ray crystallographic images, which have caught the door in its open position, show that each subunit must move in order to open the channel. "How does this happen? Do they open one by one? Or at the same time? That will definitely be an interesting thing to look at," Roux says. Once he finds out, with help from NCSA's computing resources, rush hour will never feel as bewildering again.</p>
+    
+    </div>
+    </div>
+	<!-- end #mainContent --></div>
+	<!-- clear floats --><br class="clearfloat" /><br class="clearfloat" />
+    
+     <div id="copyFooter">
+    <div class="footText">
+     <br>
+<p>For further information:<br>
+<a href="http://thallium.med.cornell.edu/RouxLab/">Roux Lab</a></p><br>
+</div>
+<div class="spacer">&nbsp;</div>
+<div class="footText">
+<br>
+<p><span style="font-weight:bold">Team members</span><br>
+Simon Berneche<br>
+Benoit Roux </p>
+<br>
+</div>
+<div class="spacer">&nbsp;</div>
+<div class="footText">
+<p>This research is supported <br>by the <a href="http://www.nsf.gov/">National Science Foundation</a>, <br>the <a href="http://www.nih.gov/">National Institutes of Health</a>, <br>the <a href="http://www.merck.com/mrl/">Merck Research Laboratory</a>, <br>and the <a href="http://www.wmkeck.org/">Keck Foundation</a>.</p>
+</div>
+    </div>
+    
+<!-- end #container --></div>
+</body> 
+</html>

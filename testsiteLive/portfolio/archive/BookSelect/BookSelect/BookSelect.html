@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <!--  <link rel="stylesheet" href="BookSelect.css"> -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    #content {
+        width: 700px;
+
+        margin-left: 200px;
+        margin-top:250px;
+    }
+    #select {
+        margin-left: 25%;
+        position: absolute;
+    }
+</style>
+<body>
+<div>
+    <p>Book selected</p>
+
+<div id = "select"></div>
+    <div id = "content"></div>
+    <script>
+
+        $.getJSON("https://www.googleapis.com/books/v1/volumes",{q:"guitar"})
+                .done(
+                function(data) {
+                    console.log(data);
+                    var results = data;
+                    handleResponse(results);
+                    console.log("results");
+                });
+        function handleResponse(results) {
+
+
+            var item = results.items[8];
+            $('#select').append("<p><img src= "+ item.volumeInfo.imageLinks.thumbnail + "</p>");
+            $('#content').append("<p>"+ item.volumeInfo.title + " by " + item.volumeInfo.authors + "<br><br><br>"+item.volumeInfo.description + "</p>");
+        };
+        // in production code, item.text should have the HTML entities escaped.
+
+                //            get thumbnail image,
+
+
+    </script>
+
+</div>
+</body>
+</html>
